@@ -1,0 +1,179 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+h1 {
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+form h4 {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #004085;
+}
+
+#login-btn {
+    position: relative;
+    transition: transform 0.3s ease;
+    user-select: none;
+}
+
+#login-btn.teleporting {
+    position: relative; 
+    width: 100%;
+    max-width: 400px; 
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+#game-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#game-overlay.hidden {
+    display: none;
+}
+
+.game-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.game-box h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#score {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+#balloon-area {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+.balloon {
+    position: absolute;
+    width: 35px;
+    height: 45px;
+    background-color: #ff4757;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    cursor: pointer;
+    animation: floatUp 3s linear infinite;
+    bottom: -50px;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 15px;
+    width: 2px;
+    height: 10px;
+    background-color: #888;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        transform: translateY(-300px) scale(1);
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes dance {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(30px, -20px) rotate(5deg); }
+    50% { transform: translate(-20px, 15px) rotate(-5deg); }
+    75% { transform: translate(15px, 25px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+#login-btn.dancing {
+    position: relative;
+    animation: dance 1.5s infinite ease-in-out;
+    background-color: #ff4757;
+}
