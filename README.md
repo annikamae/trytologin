@@ -7,8 +7,8 @@ HOW TO USE:
 2) Enter the following credentials:
 	Username: annikamae
 	Password: 123456Amazing!
-3) Try logging in
+3) Try logging in<br>
 ===========<br>
 
-Made by Annika Pasaje
+Made by Annika Pasaje<br>
 An entry for SPARCS Bounty
