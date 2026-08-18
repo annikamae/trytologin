@@ -8,7 +8,7 @@ HOW TO USE:
 	Username: annikamae
 	Password: 123456Amazing!
 3) Try logging in<br>
-===========<br>
+===========
 
 Made by Annika Pasaje<br>
 An entry for SPARCS Bounty
