@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In! If you can lol</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        <form id="login-form">                    
+            <h4>Username</h4>
+            <input id="username" placeholder="Enter your username...">
+            <h4>Password</h4>
+            <input id="password" type="password" placeholder="Enter your password...">
+            <button type="submit" id="login-btn">Log-in</button>
+        </form>
+    </div>
+
+    <div id="game-overlay" class="hidden">
+        <div class="game-box">
+            <h3>Pop 5 balloons to unlock the login button!</h3>
+            <div id="score">Popped: 0 / 5</div>
+            <div id="balloon-area"></div>
+            <button id="close-game" class="hidden">Proceed to Hide & Seek</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
